@@ -1,11 +1,8 @@
 export const onOpen = () => {
   const menu = SpreadsheetApp.getUi()
-    .createMenu('My Sample React Project') // edit me!
-    .addItem('Sheet Editor', 'openDialog')
-    .addItem('Sheet Editor (Bootstrap)', 'openDialogBootstrap')
-    .addItem('Sheet Editor (MUI)', 'openDialogMUI')
-    .addItem('Sheet Editor (Tailwind CSS)', 'openDialogTailwindCSS')
-    .addItem('About me', 'openAboutSidebar');
+    .createMenu('Phone and Email validation by Foxentry') // edit me!
+    .addItem('Open Sidebar', 'openAboutSidebar')
+    .addItem('Set Api Key', 'openSetApiKey');
 
   menu.addToUi();
 };
@@ -41,4 +38,11 @@ export const openDialogTailwindCSS = () => {
 export const openAboutSidebar = () => {
   const html = HtmlService.createHtmlOutputFromFile('sidebar-about-page');
   SpreadsheetApp.getUi().showSidebar(html);
+};
+
+export const openSetApiKey = () => {
+  const html = HtmlService.createHtmlOutputFromFile('sidebar-about-page')
+    .setWidth(600)
+    .setHeight(600);
+  SpreadsheetApp.getUi().showModalDialog(html, 'Sheet Editor');
 };

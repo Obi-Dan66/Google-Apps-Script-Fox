@@ -5,6 +5,7 @@ import {
   openDialogMUI,
   openDialogTailwindCSS,
   openAboutSidebar,
+  openSetApiKey,
 } from './ui';
 
 import { getSheetsData, addSheet, deleteSheet, setActiveSheet } from './sheets';
@@ -17,6 +18,7 @@ export {
   openDialogMUI,
   openDialogTailwindCSS,
   openAboutSidebar,
+  openSetApiKey,
   getSheetsData,
   addSheet,
   deleteSheet,
